@@ -26,6 +26,7 @@ gem 'dotenv-rails', '~> 2.2'
 gem 'apipie-rails', '~> 0.5.5'
 gem 'acts_as_list', '~> 0.9.9'
 gem 'rack-cors', '~> 1.0', '>= 1.0.2', require: 'rack/cors'
+gem 'rack-test', '= 0.7.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
