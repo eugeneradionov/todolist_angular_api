@@ -25,8 +25,11 @@ class Api::V1::CommentsController < ApplicationController
   api :POST, '/projects/:project_id/tasks/:task_id/comments', 'Creates new comment'
   param_group :update_comment
   def create
-    return render json: @comment, status: :created if @comment.save
-    render json: @comment.errors.full_messages, status: :unprocessable_entity
+    if @comment.save
+      render json: @comment, status: :created
+    else
+      render json: @comment.errors.full_messages, status: :unprocessable_entity
+    end
   end
 
   api :DELETE, '/projects/:project_id/comments/:id', 'Destroys comment, selected by id'
@@ -38,7 +41,7 @@ class Api::V1::CommentsController < ApplicationController
 
   private
 
-  def task_params
+  def comment_params
     params.require(:comment).permit(:body, :attachment)
   end
 end

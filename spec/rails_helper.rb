@@ -57,6 +57,7 @@ RSpec.configure do |config|
   config.use_transactional_fixtures = true
   config.include Warden::Test::Helpers
   config.include Devise::Test::ControllerHelpers, type: :controller
+  config.include Requests::JsonHelpers, type: :controller
 end
 
 Shoulda::Matchers.configure do |config|

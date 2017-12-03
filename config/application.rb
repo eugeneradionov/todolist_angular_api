@@ -33,17 +33,6 @@ module TodolistAngularApi
       g.fixture_replacement :factory_bot, dir: 'spec/factories'
     end
 
-    config.middleware.use Rack::Cors do
-      allow do
-        origins '*'
-        resource '*',
-                 :header => :any,
-                 # :headers => 'Origin, X-Requested-With, Content-Type, Accept, Authorization',
-                 :expose  => %w[access-token expiry token-type uid client],
-                 :methods => [:get, :post, :options, :delete, :put]
-      end
-    end
-
     config.api_only = true
   end
 end

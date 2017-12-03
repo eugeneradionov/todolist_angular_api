@@ -4,6 +4,8 @@ class CreateComments < ActiveRecord::Migration[5.1]
       t.string :body
       t.string :attachment
       t.references :task, foreign_key: true
+
+      t.timestamps
     end
   end
 end

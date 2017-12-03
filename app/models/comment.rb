@@ -1,4 +1,5 @@
 class Comment < ApplicationRecord
   belongs_to :task, counter_cache: true
-  validates :body, length: {maximum: 200}, presence: true
+  validates :body, length: { in: 10..256 }, presence: true
+  mount_base64_uploader :attachment, AttachmentUploader
 end

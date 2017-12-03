@@ -21,12 +21,14 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'cancancan', '~> 2.0'
 gem 'devise_token_auth', '~> 0.1.42'
 gem 'omniauth', '~> 1.7', '>= 1.7.1'
-gem 'fog-aws', '~> 1.4', '>= 1.4.1'
 gem 'mini_magick', '~> 4.8'
 gem 'dotenv-rails', '~> 2.2'
 gem 'apipie-rails', '~> 0.5.5'
 gem 'acts_as_list', '~> 0.9.9'
 gem 'rack-cors', '~> 1.0', '>= 1.0.2', require: 'rack/cors'
+gem 'carrierwave', '~> 1.2', '>= 1.2.1'
+gem 'carrierwave-base64', '~> 2.6', '>= 2.6.1'
+gem 'fog-aws', '~> 2.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -38,6 +40,9 @@ group :development, :test do
   gem 'capybara', '~> 2.14', '>= 2.14.4'
   gem 'transactional_capybara', '~> 0.2.0'
   gem 'factory_bot_rails', '~> 4.8', '>= 4.8.2'
+  gem 'ffaker', '~> 2.7'
+  gem 'shoulda-matchers', '~> 3.1', '>= 3.1.2'
+  gem 'json_matchers', '~> 0.7.2'
 end
 
 group :development do
