@@ -58,6 +58,7 @@ RSpec.configure do |config|
   config.include Warden::Test::Helpers
   config.include Devise::Test::ControllerHelpers, type: :controller
   config.include Requests::JsonHelpers, type: :controller
+  config.filter_run show_in_doc: true if ENV['APIPIE_RECORD']
 end
 
 Shoulda::Matchers.configure do |config|

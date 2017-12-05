@@ -1,0 +1,488 @@
+{
+  "comments#create": [
+    {
+      "verb": "POST",
+      "path": "/api/v1/projects/2/tasks/2/comments",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": {
+        "comment": {
+          "body": "Valid length comment"
+        }
+      },
+      "response_data": {
+        "id": 11,
+        "body": "Valid length comment",
+        "attachment": {
+          "url": null,
+          "thumb": {
+            "url": null
+          }
+        },
+        "task_id": 2,
+        "created_at": "2017-12-05T14:38:17.720Z",
+        "updated_at": "2017-12-05T14:38:17.720Z"
+      },
+      "code": "201",
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "POST",
+      "path": "/api/v1/projects/3/tasks/3/comments",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": {
+        "comment": {
+          "body": "Short"
+        }
+      },
+      "response_data": [
+        "Body is too short (minimum is 10 characters)"
+      ],
+      "code": "422",
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "POST",
+      "path": "/api/v1/projects/4/tasks/4/comments",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": {
+        "comment": {
+          "body": "Valid length comment"
+        }
+      },
+      "response_data": {
+        "errors": [
+          "You need to sign in or sign up before continuing."
+        ]
+      },
+      "code": "401",
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "comments#index": [
+    {
+      "verb": "GET",
+      "path": "/api/v1/projects/1/tasks/1/comments",
+      "versions": [
+        "1.0"
+      ],
+      "query": "",
+      "request_data": null,
+      "response_data": [
+        {
+          "id": 10,
+          "body": "[\"Aut aut ea illo quam deleniti et voluptatem aperiam.\", \"Laborum velit praesentium enim quidem adipisci.\", \"Quia doloremque officiis aliquid eveniet.\"]",
+          "attachment": {
+            "url": null,
+            "thumb": {
+              "url": null
+            }
+          },
+          "task_id": 1,
+          "created_at": "2017-12-05T14:38:17.233Z",
+          "updated_at": "2017-12-05T14:38:17.233Z"
+        },
+        {
+          "id": 9,
+          "body": "[\"Blanditiis totam perspiciatis aut corporis deserunt minima amet est.\", \"A repellat culpa eaque rerum quis earum.\", \"Ea et fugiat error sint.\"]",
+          "attachment": {
+            "url": null,
+            "thumb": {
+              "url": null
+            }
+          },
+          "task_id": 1,
+          "created_at": "2017-12-05T14:38:17.221Z",
+          "updated_at": "2017-12-05T14:38:17.221Z"
+        },
+        {
+          "id": 8,
+          "body": "[\"Perferendis iure earum sunt voluptatem omnis et perspiciatis.\", \"Aut et velit est dolores unde ut saepe voluptatem.\", \"Voluptatem aperiam perferendis eum debitis.\"]",
+          "attachment": {
+            "url": null,
+            "thumb": {
+              "url": null
+            }
+          },
+          "task_id": 1,
+          "created_at": "2017-12-05T14:38:17.213Z",
+          "updated_at": "2017-12-05T14:38:17.213Z"
+        },
+        {
+          "id": 7,
+          "body": "[\"Vel quis eius est officia sit enim et.\", \"Iusto corrupti et quod dolorem magni consectetur.\", \"Alias atque rerum debitis molestias totam suscipit dolore.\"]",
+          "attachment": {
+            "url": null,
+            "thumb": {
+              "url": null
+            }
+          },
+          "task_id": 1,
+          "created_at": "2017-12-05T14:38:17.205Z",
+          "updated_at": "2017-12-05T14:38:17.205Z"
+        },
+        {
+          "id": 6,
+          "body": "[\"Aliquid nesciunt ut quas ullam eum quis nulla.\", \"At et unde tempora maxime sunt.\", \"Praesentium sunt nisi aut necessitatibus qui ut nihil.\"]",
+          "attachment": {
+            "url": null,
+            "thumb": {
+              "url": null
+            }
+          },
+          "task_id": 1,
+          "created_at": "2017-12-05T14:38:17.193Z",
+          "updated_at": "2017-12-05T14:38:17.193Z"
+        },
+        {
+          "id": 5,
+          "body": "[\"Ea eos dolor consequatur saepe.\", \"Consectetur accusantium magnam enim porro sed possimus id.\", \"Sed pariatur aut mollitia nesciunt.\"]",
+          "attachment": {
+            "url": null,
+            "thumb": {
+              "url": null
+            }
+          },
+          "task_id": 1,
+          "created_at": "2017-12-05T14:38:17.185Z",
+          "updated_at": "2017-12-05T14:38:17.185Z"
+        },
+        {
+          "id": 4,
+          "body": "[\"Quo sit beatae aperiam fugit quia.\", \"Sit debitis non sed explicabo accusantium.\", \"Molestiae quidem rem quae magnam voluptatem.\"]",
+          "attachment": {
+            "url": null,
+            "thumb": {
+              "url": null
+            }
+          },
+          "task_id": 1,
+          "created_at": "2017-12-05T14:38:17.173Z",
+          "updated_at": "2017-12-05T14:38:17.173Z"
+        },
+        {
+          "id": 3,
+          "body": "[\"Sed magnam veritatis deserunt quo perferendis.\", \"Commodi laboriosam doloribus sit et minima.\", \"Mollitia exercitationem quia corporis occaecati hic est.\"]",
+          "attachment": {
+            "url": null,
+            "thumb": {
+              "url": null
+            }
+          },
+          "task_id": 1,
+          "created_at": "2017-12-05T14:38:17.164Z",
+          "updated_at": "2017-12-05T14:38:17.164Z"
+        },
+        {
+          "id": 2,
+          "body": "[\"Minus aut consequatur accusamus ad asperiores molestias inventore quaerat.\", \"Ratione quia adipisci et tempora ut harum.\", \"Rerum perspiciatis cum a fuga et et.\"]",
+          "attachment": {
+            "url": null,
+            "thumb": {
+              "url": null
+            }
+          },
+          "task_id": 1,
+          "created_at": "2017-12-05T14:38:17.156Z",
+          "updated_at": "2017-12-05T14:38:17.156Z"
+        },
+        {
+          "id": 1,
+          "body": "[\"Sit asperiores nostrum aut reiciendis minima sunt esse commodi.\", \"Eius quae ipsum officiis qui aperiam.\", \"Provident consectetur et et et.\"]",
+          "attachment": {
+            "url": null,
+            "thumb": {
+              "url": null
+            }
+          },
+          "task_id": 1,
+          "created_at": "2017-12-05T14:38:17.141Z",
+          "updated_at": "2017-12-05T14:38:17.141Z"
+        }
+      ],
+      "code": "200",
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "projects#index": [
+    {
+      "verb": "GET",
+      "path": "/api/v1/projects",
+      "versions": [
+        "1.0"
+      ],
+      "query": "",
+      "request_data": null,
+      "response_data": [
+        {
+          "id": 5,
+          "name": "deloise_considine",
+          "user_id": 5,
+          "created_at": "2017-12-05T14:38:18.259Z",
+          "updated_at": "2017-12-05T14:38:18.259Z"
+        },
+        {
+          "id": 6,
+          "name": "pearline.heidenreich",
+          "user_id": 5,
+          "created_at": "2017-12-05T14:38:18.267Z",
+          "updated_at": "2017-12-05T14:38:18.267Z"
+        },
+        {
+          "id": 7,
+          "name": "deon.dickinson",
+          "user_id": 5,
+          "created_at": "2017-12-05T14:38:18.276Z",
+          "updated_at": "2017-12-05T14:38:18.276Z"
+        },
+        {
+          "id": 8,
+          "name": "deandre.friesen",
+          "user_id": 5,
+          "created_at": "2017-12-05T14:38:18.284Z",
+          "updated_at": "2017-12-05T14:38:18.284Z"
+        },
+        {
+          "id": 9,
+          "name": "dottie.veum",
+          "user_id": 5,
+          "created_at": "2017-12-05T14:38:18.292Z",
+          "updated_at": "2017-12-05T14:38:18.292Z"
+        }
+      ],
+      "code": "200",
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "tasks#create": [
+    {
+      "verb": "POST",
+      "path": "/api/v1/projects/11/tasks",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": {
+        "task": {
+          "deadline": "2017-12-06",
+          "name": "A Fistful of Death Dreams",
+          "project_id": "11"
+        }
+      },
+      "response_data": {
+        "id": 10,
+        "name": "A Fistful of Death Dreams",
+        "deadline": "2017-12-06T00:00:00.000Z",
+        "completed": false,
+        "position": 1,
+        "comments_count": 0,
+        "project_id": 11,
+        "created_at": "2017-12-05T14:38:19.068Z",
+        "updated_at": "2017-12-05T14:38:19.068Z"
+      },
+      "code": "201",
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "POST",
+      "path": "/api/v1/projects/12/tasks",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": {
+        "task": {
+          "deadline": "2017-12-04",
+          "name": "",
+          "project_id": "12"
+        }
+      },
+      "response_data": [
+        "Name can't be blank"
+      ],
+      "code": "422",
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "tasks#destroy": [
+    {
+      "verb": "DELETE",
+      "path": "/api/v1/projects/14/tasks/17",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": {
+      },
+      "response_data": {
+      },
+      "code": "204",
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "tasks#index": [
+    {
+      "verb": "GET",
+      "path": "/api/v1/projects/10/tasks",
+      "versions": [
+        "1.0"
+      ],
+      "query": "",
+      "request_data": null,
+      "response_data": [
+        {
+          "id": 5,
+          "name": "bicycle rights",
+          "deadline": "2017-12-06T00:00:00.000Z",
+          "completed": false,
+          "position": 1,
+          "comments_count": 0,
+          "project_id": 10,
+          "created_at": "2017-12-05T14:38:18.583Z",
+          "updated_at": "2017-12-05T14:38:18.583Z"
+        },
+        {
+          "id": 6,
+          "name": "tofu",
+          "deadline": "2017-12-06T00:00:00.000Z",
+          "completed": false,
+          "position": 2,
+          "comments_count": 0,
+          "project_id": 10,
+          "created_at": "2017-12-05T14:38:18.591Z",
+          "updated_at": "2017-12-05T14:38:18.591Z"
+        },
+        {
+          "id": 7,
+          "name": "sartorial",
+          "deadline": "2017-12-06T00:00:00.000Z",
+          "completed": false,
+          "position": 3,
+          "comments_count": 0,
+          "project_id": 10,
+          "created_at": "2017-12-05T14:38:18.601Z",
+          "updated_at": "2017-12-05T14:38:18.601Z"
+        },
+        {
+          "id": 8,
+          "name": "locavore",
+          "deadline": "2017-12-06T00:00:00.000Z",
+          "completed": false,
+          "position": 4,
+          "comments_count": 0,
+          "project_id": 10,
+          "created_at": "2017-12-05T14:38:18.612Z",
+          "updated_at": "2017-12-05T14:38:18.612Z"
+        },
+        {
+          "id": 9,
+          "name": "gluten-free",
+          "deadline": "2017-12-06T00:00:00.000Z",
+          "completed": false,
+          "position": 5,
+          "comments_count": 0,
+          "project_id": 10,
+          "created_at": "2017-12-05T14:38:18.620Z",
+          "updated_at": "2017-12-05T14:38:18.620Z"
+        }
+      ],
+      "code": "200",
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "tasks#update": [
+    {
+      "verb": "PUT",
+      "path": "/api/v1/projects/13/tasks/11",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": {
+        "task": {
+          "deadline": "2017-12-06",
+          "done": "true",
+          "name": "New owesome name",
+          "project_id": "13"
+        }
+      },
+      "response_data": [
+        {
+          "id": 11,
+          "name": "New owesome name",
+          "deadline": "2017-12-06T00:00:00.000Z",
+          "completed": false,
+          "position": 1,
+          "comments_count": 0,
+          "project_id": 13,
+          "created_at": "2017-12-05T14:38:19.525Z",
+          "updated_at": "2017-12-05T14:38:19.699Z"
+        },
+        {
+          "id": 12,
+          "name": "single-origin coffee",
+          "deadline": "2017-12-06T00:00:00.000Z",
+          "completed": false,
+          "position": 2,
+          "comments_count": 0,
+          "project_id": 13,
+          "created_at": "2017-12-05T14:38:19.534Z",
+          "updated_at": "2017-12-05T14:38:19.534Z"
+        },
+        {
+          "id": 13,
+          "name": "wolf",
+          "deadline": "2017-12-06T00:00:00.000Z",
+          "completed": false,
+          "position": 3,
+          "comments_count": 0,
+          "project_id": 13,
+          "created_at": "2017-12-05T14:38:19.543Z",
+          "updated_at": "2017-12-05T14:38:19.543Z"
+        },
+        {
+          "id": 14,
+          "name": "wolf",
+          "deadline": "2017-12-06T00:00:00.000Z",
+          "completed": false,
+          "position": 4,
+          "comments_count": 0,
+          "project_id": 13,
+          "created_at": "2017-12-05T14:38:19.551Z",
+          "updated_at": "2017-12-05T14:38:19.551Z"
+        },
+        {
+          "id": 15,
+          "name": "Austin",
+          "deadline": "2017-12-06T00:00:00.000Z",
+          "completed": false,
+          "position": 5,
+          "comments_count": 0,
+          "project_id": 13,
+          "created_at": "2017-12-05T14:38:19.561Z",
+          "updated_at": "2017-12-05T14:38:19.561Z"
+        }
+      ],
+      "code": "200",
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ]
+}
